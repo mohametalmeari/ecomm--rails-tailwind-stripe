@@ -1,6 +1,6 @@
 class CreateAdminProducts < ActiveRecord::Migration[7.0]
   def change
-    create_table :admin_products do |t|
+    create_table :products do |t|
       t.string :name
       t.text :description
       t.integer :price
