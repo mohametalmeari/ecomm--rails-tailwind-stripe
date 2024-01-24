@@ -15,15 +15,17 @@
           <table class="min-w-full overflow-x-scroll">
             <thead class="bg-white border-b">
               <tr>
+                <th scope="col" class="text-sm font-medium text-gray-800 px-6 py-4 text-left"></th>
                 <th scope="col" class="text-sm font-medium text-gray-800 px-6 py-4 text-left">Name</th>
-              </tr>
-              <tr>
                 <th scope="col" class="text-sm font-medium text-gray-800 px-6 py-4 text-left">Description</th>
               </tr>
             </thead>
             <tbody>
               <% @admin_categories.each do |c| %>
                 <tr class="bg-gray-50 border-b">
+                  <td class="px-6 py-4 whitespace-nowrap tex-sm font-medium text-gray-800 underline">
+                    <%= c.image.present? ? image_tag(c.image.variant(:thumb)) : image_tag("https://via.placeholder.com/50") %>
+                  </td>
                   <td class="px-6 py-4 whitespace-nowrap tex-sm font-medium text-gray-800 underline">
                     <%= link_to c.name, edit_admin_category_path(c) %>
                   </td>
