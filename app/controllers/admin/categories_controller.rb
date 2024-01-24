@@ -1,9 +1,9 @@
-class Admin::CategoriesController < ApplicationController
+class Admin::CategoriesController < AdminController
   before_action :set_admin_category, only: %i[ show edit update destroy ]
 
   # GET /admin/categories or /admin/categories.json
   def index
-    @admin_categories = Admin::Category.all
+    @admin_categories = Category.all
   end
 
   # GET /admin/categories/1 or /admin/categories/1.json
@@ -12,7 +12,7 @@ class Admin::CategoriesController < ApplicationController
 
   # GET /admin/categories/new
   def new
-    @admin_category = Admin::Category.new
+    @admin_category = Category.new
   end
 
   # GET /admin/categories/1/edit
@@ -21,7 +21,7 @@ class Admin::CategoriesController < ApplicationController
 
   # POST /admin/categories or /admin/categories.json
   def create
-    @admin_category = Admin::Category.new(admin_category_params)
+    @admin_category = Category.new(admin_category_params)
 
     respond_to do |format|
       if @admin_category.save
@@ -60,7 +60,7 @@ class Admin::CategoriesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_category
-      @admin_category = Admin::Category.find(params[:id])
+      @admin_category = Category.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
