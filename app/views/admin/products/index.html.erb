@@ -28,7 +28,7 @@
                     <%= p.images.any? ? image_tag(p.images.first.variant(:thumb)) : image_tag("https://via.placeholder.com/50") %>
                   </td>
                   <td class="px-6 py-4 whitespace-nowrap tex-sm font-medium text-gray-800 underline">
-                    <%= link_to p.name, edit_admin_category_path(p) %>
+                    <%= link_to p.name, edit_admin_product_path(p) %>
                   </td>
                   <td class="px-6 py-4 whitespace-nowrap tex-sm font-medium text-gray-800">
                     <%= p.description %>
