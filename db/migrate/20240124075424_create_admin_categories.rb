@@ -1,6 +1,6 @@
 class CreateAdminCategories < ActiveRecord::Migration[7.0]
   def change
-    create_table :admin_categories do |t|
+    create_table :categories do |t|
       t.string :name
       t.text :description
 
