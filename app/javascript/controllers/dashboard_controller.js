@@ -5,9 +5,10 @@ Chart.register(...registerables);
 
 // Connects to data-controller="dashboard"
 export default class extends Controller {
+  static values = { revenue: Array }
   initialize() {
-    const data = [1, 2, 3, 4, 5, 6, 7]
-    const labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    const data = this.revenueValue.map((item) => item[1]/100.0)
+    const labels = this.revenueValue.map ((item) => item[0])
 
     const ctx = document.getElementById('revenueChart')
 
