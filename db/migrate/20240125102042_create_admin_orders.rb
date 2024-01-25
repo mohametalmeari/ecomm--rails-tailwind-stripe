@@ -4,7 +4,7 @@ class CreateAdminOrders < ActiveRecord::Migration[7.0]
       t.string :customer_email
       t.boolean :fulfilled
       t.integer :total
-      t.string :adress
+      t.string :address
 
       t.timestamps
     end
