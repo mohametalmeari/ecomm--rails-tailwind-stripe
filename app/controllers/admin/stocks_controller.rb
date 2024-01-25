@@ -1,9 +1,9 @@
-class Admin::StocksController < ApplicationController
+class Admin::StocksController < AdminController
   before_action :set_admin_stock, only: %i[ show edit update destroy ]
 
   # GET /admin/stocks or /admin/stocks.json
   def index
-    @admin_stocks = Admin::Stock.all
+    @admin_stocks = Stock.all
   end
 
   # GET /admin/stocks/1 or /admin/stocks/1.json
@@ -12,7 +12,7 @@ class Admin::StocksController < ApplicationController
 
   # GET /admin/stocks/new
   def new
-    @admin_stock = Admin::Stock.new
+    @admin_stock = Stock.new
   end
 
   # GET /admin/stocks/1/edit
@@ -21,7 +21,7 @@ class Admin::StocksController < ApplicationController
 
   # POST /admin/stocks or /admin/stocks.json
   def create
-    @admin_stock = Admin::Stock.new(admin_stock_params)
+    @admin_stock = Stock.new(admin_stock_params)
 
     respond_to do |format|
       if @admin_stock.save
@@ -60,7 +60,7 @@ class Admin::StocksController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_stock
-      @admin_stock = Admin::Stock.find(params[:id])
+      @admin_stock = Stock.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
