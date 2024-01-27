@@ -14,7 +14,7 @@ class Admin::OrdersTest < ApplicationSystemTestCase
     visit admin_orders_url
     click_on "New order"
 
-    fill_in "Adress", with: @admin_order.adress
+    fill_in "Address", with: @admin_order.address
     fill_in "Customer email", with: @admin_order.customer_email
     check "Fulfilled" if @admin_order.fulfilled
     fill_in "Total", with: @admin_order.total
@@ -28,7 +28,7 @@ class Admin::OrdersTest < ApplicationSystemTestCase
     visit admin_order_url(@admin_order)
     click_on "Edit this order", match: :first
 
-    fill_in "Adress", with: @admin_order.adress
+    fill_in "Address", with: @admin_order.address
     fill_in "Customer email", with: @admin_order.customer_email
     check "Fulfilled" if @admin_order.fulfilled
     fill_in "Total", with: @admin_order.total
