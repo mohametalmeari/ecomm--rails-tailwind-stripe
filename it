@@ -1,0 +1,27 @@
+=> 
+[32m#<Stripe::Customer:0x8c28 id=cus_PSAFHYQCJhNnIj> JSON: {
+  "id": "cus_PSAFHYQCJhNnIj",
+  "object": "customer",
+  "address": null,
+  "balance": 0,
+  "created": 1706377423,
+  "currency": null,
+  "default_source": null,
+  "delinquent": false,
+  "description": null,
+  "discount": null,
+  "email": "test2@example.com",
+  "invoice_prefix": "607DAD6E",
+  "invoice_settings": {"custom_fields":null,"default_payment_method":null,"footer":null,"rendering_options":null},
+  "livemode": false,
+  "metadata": {},
+  "name": null,
+  "next_invoice_sequence": 1,
+  "phone": null,
+  "preferred_locales": [
+
+  ],
+  "shipping": null,
+  "tax_exempt": "none",
+  "test_clock": null
+}[0m
