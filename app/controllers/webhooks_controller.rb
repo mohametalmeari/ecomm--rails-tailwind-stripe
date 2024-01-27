@@ -38,7 +38,7 @@ class WebhooksController < ApplicationController
         product = Stripe::Product.retrieve(item["price"]["product"])
         product_id = product["metadata"]["product_id"].to_i
         OrderProduct.create!(order: order, product_id: product_id, quantity: item["quantity"], size: product["metadata"]["size"])
-        ProductStock.find(product["metadata"]["product_stock_id"]).decrement!(:amount, item["quantity"])
+        Stock.find(product["metadata"]["product_stock_id"]).decrement!(:amount, item["quantity"])
       end
 
     else
