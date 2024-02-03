@@ -32,6 +32,8 @@ export default class extends Controller {
       })
       localStorage.setItem("cart", JSON.stringify(cartArray))
     }
+    const msgEl = document.getElementById("msg")
+    msgEl.innerHTML = `Added to cart`
   }
 
   selectSize(e) {
